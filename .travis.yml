@@ -1,0 +1,31 @@
+sudo: required
+dist: trusty
+services:
+  - docker
+
+before_install:
+  docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:3.14.0-europium
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+language: node_js
+node_js:
+  - 7
+install:
+  - npm install
+  - npm install protractor
+  - sleep 10
+before_script:
+script:
+   - protractor conf.js
+
+notifications:
+  email:
+    recipients:
+      - muzamil.abbasi@gmail.com
+      
+    on_success: always # default: change
+    on_failure: always # default: always
