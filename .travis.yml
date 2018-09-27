@@ -17,7 +17,7 @@ install:
 before_script:
   - webdriver-manager update
   - sleep 10
-  - webdriver-manager update
+  - webdriver-manager start
   - sleep 10
 script:
    - protractor conf.js
