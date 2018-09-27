@@ -15,10 +15,8 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 install:
   - npm install
-  - npm install -g bower
-  - bower install
-  - npm install -g protractor
-  - npm intall -g webdriver-manager
+  - npm install protractor
+  - npm intall  webdriver-manager
 script:
   - npm run ci
   - webdriver-manager start
