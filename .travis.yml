@@ -14,7 +14,9 @@ install:
   - npm install
   - npm install protractor
   - npm install webdriver-manager
-  - sleep 5
+  - sleep 10
+  - npm install webdriver-manager
+  - sleep 10
 script:
   - webdriver-manager start
   - protractor conf.js
