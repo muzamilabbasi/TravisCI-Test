@@ -17,6 +17,8 @@ install:
   - npm install
   - npm install -g bower
   - bower install
+  - npm install -g protractor
+  - npm intall -g webdriver-manager
 script:
   - npm run ci
   - webdriver-manager start
