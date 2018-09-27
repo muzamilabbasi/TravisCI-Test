@@ -21,3 +21,11 @@ install:
 before_script:
 script:
    - protractor conf.js
+
+notifications:
+  email:
+    recipients:
+      - muzamil.abbasi@gmail.com
+      
+    on_success: always # default: change
+    on_failure: always # default: always
