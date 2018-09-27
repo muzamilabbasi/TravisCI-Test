@@ -11,13 +11,11 @@ node_js:
   - 6
   - 7
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 install:
   - npm install
   - npm install protractor
   - npm install webdriver-manager
+  - npm install webdriver-update
 script:
-  - npm run ci
   - webdriver-manager start
   - protractor conf.js
