@@ -8,14 +8,13 @@ addons:
       - google-chrome-stable
 language: node_js
 node_js:
-  - 6
   - 7
 before_script:
 install:
   - npm install
   - npm install protractor
   - npm install webdriver-manager
-  - npm install webdriver-update
+  - sleep 5
 script:
   - webdriver-manager start
   - protractor conf.js
