@@ -16,7 +16,7 @@ before_script:
 install:
   - npm install
   - npm install protractor
-  - npm intall  webdriver-manager
+  - npm install webdriver-manager
 script:
   - npm run ci
   - webdriver-manager start
